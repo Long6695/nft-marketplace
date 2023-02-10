@@ -4,12 +4,15 @@ import axios from 'axios'
 import Link from 'next/link'
 import React from 'react'
 
-const fetchUser = async () => {
+const fetchUser = async (): Promise<any> => {
   return await axios.get('https://jsonplaceholder.typicode.com/todos/1')
 }
 export default function Home(): JSX.Element {
-  const { isLoading, data } = useQuery({queryKey: ['users'], queryFn: fetchUser})
-  if(isLoading) {
+  const { isLoading } = useQuery({
+    queryKey: ['users'],
+    queryFn: fetchUser,
+  })
+  if (isLoading) {
     return <h1>Loading....</h1>
   }
   return (

@@ -3,10 +3,13 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontSize: {
-      h1: ['var(--h1)', {
-        lineHeight: 'var(--h1-line-height)',
-        fontWeight: 'var(--font-weight-700)',
-      }],
+      h1: [
+        'var(--h1)',
+        {
+          lineHeight: 'var(--h1-line-height)',
+          fontWeight: 'var(--font-weight-700)',
+        },
+      ],
       h2: 'var(--h2)',
       h3: 'var(--h3)',
       h4: 'var(--h4)',
