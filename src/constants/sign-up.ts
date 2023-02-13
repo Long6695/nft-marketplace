@@ -31,8 +31,8 @@ export const SU_FIELDS = [
     fieldName: 'password',
     validate: {
       minLength: {
-        value: 5,
-        message: 'min length is 5',
+        value: 6,
+        message: `Value must be minimum 6`,
       },
     },
     type: 'password',
