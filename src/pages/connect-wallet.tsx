@@ -3,8 +3,12 @@ import Image from 'next/image'
 import { UIText, UITitle } from '@/components'
 import { CW_DESCRIPTION, CW_TITLE } from '@/constants/connect-wallet'
 import UIButton from '@/components/Button/UIButton'
+import { useMediaQuery } from '@/hooks/useMediaQuery'
+import { DESKTOP } from '@/constants/breakpoint'
 
 const ConnectWalletPage = (): JSX.Element => {
+  const isMatch = useMediaQuery(DESKTOP)
+
   return (
     <div className="flex flex-col tablet:flex-row tablet:justify-between tablet:gap-10 desktop:gap-[60px]">
       <div className="relative w-screen h-[232px] tablet:w-1/2 tablet:h-screen">
@@ -25,19 +29,19 @@ const ConnectWalletPage = (): JSX.Element => {
           <UIButton
             imgSrc="/images/metamask.png"
             imgAlt="metamask"
-            variant="outlinedPrimary"
+            variant={isMatch ? 'outlinedSecondary' : 'outlinedPrimary'}
             title="Metamask"
           />
           <UIButton
             imgSrc="/images/wallet-connect.png"
             imgAlt="wallet-connect"
-            variant="outlinedPrimary"
+            variant={isMatch ? 'outlinedSecondary' : 'outlinedPrimary'}
             title="Wallet Connect"
           />
           <UIButton
             imgSrc="/images/coinbase.png"
             imgAlt="coinbase"
-            variant="outlinedPrimary"
+            variant={isMatch ? 'outlinedSecondary' : 'outlinedPrimary'}
             title="Coinbase"
           />
         </div>
