@@ -22,7 +22,7 @@ const ConnectWalletPage = (): JSX.Element => {
         />
       </div>
       <div className="flex flex-col items-center tablet:flex tablet:w-[325px] tablet:flex-1 tablet:items-start desktop:w-[460px] gap-5 m-10">
-        <UITitle title={CW_TITLE} />
+        <UITitle title={CW_TITLE} variant="h2" />
         <UIText text={CW_DESCRIPTION} />
 
         <div className="flex flex-col gap-5 mt-5 w-[315px] tablet:w-[325px] desktop:w-[330px] desktop:gap-10">
