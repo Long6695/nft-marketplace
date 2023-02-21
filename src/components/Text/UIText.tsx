@@ -1,8 +1,12 @@
 import React from 'react'
-export const UIText = ({ text }: { text: string }): JSX.Element => {
-  return (
-    <h5 className="w-[315px] text-base tablet:w-[325px] desktop:text-h5 desktop:w-[460px]">
-      {text}
-    </h5>
-  )
+export const UIText = ({
+  text,
+  customStyle = undefined,
+}: {
+  text: string
+  customStyle?: React.ComponentProps<'p'>['className']
+}): JSX.Element => {
+  const style =
+    customStyle !== undefined ? customStyle : 'text-base desktop:text-h5'
+  return <p className={style}>{text}</p>
 }

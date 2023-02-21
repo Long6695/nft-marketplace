@@ -28,7 +28,7 @@ const SignUpPage = (): JSX.Element => {
         />
       </div>
       <div className="flex flex-col items-center tablet:flex tablet:w-[325px] tablet:flex-1 tablet:items-start desktop:w-[460px] gap-5 m-10">
-        <UITitle title={SU_TITLE} />
+        <UITitle title={SU_TITLE} variant="h2" />
         <UIText text={SU_DESCRIPTION} />
         <FormProvider {...method}>
           <form onSubmit={method.handleSubmit(onSubmit)}>
