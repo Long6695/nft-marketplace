@@ -25,7 +25,7 @@ const ConnectWalletPage = (): JSX.Element => {
         <UITitle title={CW_TITLE} />
         <UIText text={CW_DESCRIPTION} />
 
-        <div className="flex flex-col w-[315px] tablet:w-[325px] desktop:w-[330px] gap-5 mt-5">
+        <div className="flex flex-col gap-5 mt-5 w-[315px] tablet:w-[325px] desktop:w-[330px] desktop:gap-10">
           <UIButton
             imgSrc="/images/metamask.png"
             imgAlt="metamask"

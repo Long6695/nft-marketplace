@@ -32,7 +32,7 @@ const SignUpPage = (): JSX.Element => {
         <UIText text={SU_DESCRIPTION} />
         <FormProvider {...method}>
           <form onSubmit={method.handleSubmit(onSubmit)}>
-            <div className="flex flex-col w-[315px] tablet:w-[325px] desktop:w-[330px] gap-5 mt-5">
+            <div className="flex flex-col w-[315px] tablet:w-[325px] desktop:w-[330px] gap-5 mt-5 mb-8">
               {SU_FIELDS.map((field) => (
                 <UIInputForm
                   key={field.fieldName}

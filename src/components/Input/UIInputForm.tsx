@@ -38,7 +38,7 @@ export const UIInputForm = ({
   return (
     <>
       <div className="relative mb-4">
-        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pt-1">
+        <div className="absolute top-1/2 left-3 -translate-y-1/2">
           <Image width={20} height={20} src={imgSrc} alt={imgAlt} />
         </div>
         <input
