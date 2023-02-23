@@ -4,10 +4,10 @@ import UIButton from '../Button/UIButton'
 import { UIText } from '../Text/UIText'
 import { UITitle } from '../Text/UITitle'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
-import { TABLET } from '@/constants/breakpoint'
+import Avatar from '../Avatar'
 
 const UIHeroSection = (): JSX.Element => {
-  const isMatch = useMediaQuery(TABLET)
+  const { isMobile, isTablet, isDesktop } = useMediaQuery()
   const renderTotalSale = ({
     qty,
     text,
@@ -47,32 +47,23 @@ const UIHeroSection = (): JSX.Element => {
     )
   }
   return (
-    <div className="w-full flex flex-col items-center tablet:flex-row tablet:items-start tablet: justify-center gap-8">
-      <div className="flex flex-col items-start w-[330px] desktop:w-[510px]">
+    <div className="w-full flex flex-col items-center tablet:flex-row tablet:items-start tablet:justify-center gap-8">
+      <div className="flex flex-col items-start desktop:w-[510px]">
         <UITitle variant="h1" title="Discover Digital Art & Collect NFTs" />
         <UIText
           text="NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists."
           customStyle="text-base tablet-h5 mt-2"
         />
-        {!isMatch && renderActionButton()}
+        {isDesktop && renderActionButton()}
       </div>
       <div className="flex flex-col">
         <div className="relative w-[330px] h-[221px] desktop:w-[510px] desktop:h-[401px]">
           <Image src="/images/hero-section.png" fill alt="hero-section" />
         </div>
         <div className="bg-black-color-secondary rounded-b-[20px] p-4 flex flex-col items-start">
-          <UIText text="Space walker" customStyle="text-h5 mb-2" />
-          <div className="flex items-center gap-2">
-            <Image
-              src="/images/avatar.png"
-              width={24}
-              height={24}
-              alt="avatar"
-            />
-            <UIText text="Animakid" customStyle="text-base" />
-          </div>
+          <Avatar title="Space walker" name="Animakid" />
         </div>
-        {isMatch && renderActionButton()}
+        {(isMobile || isTablet) && renderActionButton()}
       </div>
     </div>
   )

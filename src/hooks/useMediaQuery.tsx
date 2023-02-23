@@ -1,18 +1,29 @@
-import { useEffect, useState } from 'react'
+import { TABLET, DESKTOP } from '@/constants/breakpoint'
+import { useState, useEffect } from 'react'
 
-export const useMediaQuery = (minWidth: number): boolean => {
-  const [isMatch, setIsMatch] = useState(false)
-
+export const useMediaQuery = (): {
+  isMobile: boolean
+  isTablet: boolean
+  isDesktop: boolean
+} => {
+  const [windowSize, setWindowSize] = useState<{ width: number }>({ width: 0 })
   useEffect(() => {
     const resizeHandler = (): void => {
-      const currentWindowWidth = window.innerWidth
-      setIsMatch(currentWindowWidth < minWidth)
+      setWindowSize({ width: window.innerWidth })
     }
-    window.addEventListener('resize', resizeHandler)
-    return () => {
-      window.removeEventListener('resize', resizeHandler)
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', resizeHandler)
+      resizeHandler()
+      return () => {
+        window.removeEventListener('resize', resizeHandler)
+      }
     }
   }, [])
 
-  return isMatch
+  const isMobile = windowSize.width < TABLET
+  const isTablet = windowSize.width >= TABLET && windowSize.width < DESKTOP
+  const isDesktop = windowSize.width >= DESKTOP
+
+  return { isMobile, isTablet, isDesktop }
 }

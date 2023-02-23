@@ -1,6 +1,5 @@
 import React, { type ReactNode } from 'react'
 import { UINavbarMobile, UINavbar } from '@/components'
-import { DESKTOP } from '@/constants/breakpoint'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 
 export default function Layout({
@@ -8,11 +7,13 @@ export default function Layout({
 }: {
   children: ReactNode
 }): JSX.Element {
-  const isMatch = useMediaQuery(DESKTOP)
+  const { isMobile, isTablet } = useMediaQuery()
   return (
     <div className="relative h-screen">
-      {isMatch ? <UINavbarMobile /> : <UINavbar />}
-      {children}
+      {isMobile || isTablet ? <UINavbarMobile /> : <UINavbar />}
+      <div className="max-w-[330px] tablet:max-w-[834px] desktop:max-w-[1050px] mx-auto">
+        {children}
+      </div>
     </div>
   )
 }
