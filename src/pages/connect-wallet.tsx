@@ -4,10 +4,9 @@ import { UIText, UITitle } from '@/components'
 import { CW_DESCRIPTION, CW_TITLE } from '@/constants/connect-wallet'
 import UIButton from '@/components/Button/UIButton'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
-import { DESKTOP } from '@/constants/breakpoint'
 
 const ConnectWalletPage = (): JSX.Element => {
-  const isMatch = useMediaQuery(DESKTOP)
+  const { isMobile, isTablet } = useMediaQuery()
 
   return (
     <div className="flex flex-col tablet:flex-row tablet:justify-between tablet:gap-10 desktop:gap-[60px]">
@@ -29,19 +28,25 @@ const ConnectWalletPage = (): JSX.Element => {
           <UIButton
             imgSrc="/images/metamask.png"
             imgAlt="metamask"
-            variant={isMatch ? 'outlinedSecondary' : 'outlinedPrimary'}
+            variant={
+              isMobile || isTablet ? 'outlinedSecondary' : 'outlinedPrimary'
+            }
             title="Metamask"
           />
           <UIButton
             imgSrc="/images/wallet-connect.png"
             imgAlt="wallet-connect"
-            variant={isMatch ? 'outlinedSecondary' : 'outlinedPrimary'}
+            variant={
+              isMobile || isTablet ? 'outlinedSecondary' : 'outlinedPrimary'
+            }
             title="Wallet Connect"
           />
           <UIButton
             imgSrc="/images/coinbase.png"
             imgAlt="coinbase"
-            variant={isMatch ? 'outlinedSecondary' : 'outlinedPrimary'}
+            variant={
+              isMobile || isTablet ? 'outlinedSecondary' : 'outlinedPrimary'
+            }
             title="Coinbase"
           />
         </div>
