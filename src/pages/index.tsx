@@ -1,6 +1,6 @@
+import React from 'react'
 import UIHeroSection from '@/components/Home/UIHeroSection'
 import UITrendingCollection from '@/components/Home/UITrendingCollection'
-import React from 'react'
 
 export default function Home(): JSX.Element {
   return (

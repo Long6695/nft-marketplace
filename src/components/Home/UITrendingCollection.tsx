@@ -7,8 +7,8 @@ const UITrendingCollection = (): JSX.Element => {
   const { isMobile, isTablet, isDesktop } = useMediaQuery()
 
   const getTrendingSections = (count: number): JSX.Element[] => {
-    return Array.from({ length: count }, () => (
-      <UITrendingSection key={count} />
+    return Array.from({ length: count }, (_, idx) => (
+      <UITrendingSection key={idx} />
     ))
   }
 
