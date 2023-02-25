@@ -68,16 +68,15 @@ export const UINavbarMobile = (): JSX.Element => {
               </Link>
             </div>
             <div className="w-[120px] h-[50px]">
-              <Link href="/sign-up">
-                <UIButton
-                  iconSize={20}
-                  title="Sign Up"
-                  // imgAlt="sign-up"
-                  // imgSrc="/images/user-white.png"
-                  variant="secondary"
-                  iconPos="left-4"
-                />
-              </Link>
+              <UIButton
+                href="/sign-up"
+                iconSize={20}
+                title="Sign Up"
+                // imgAlt="sign-up"
+                // imgSrc="/images/user-white.png"
+                variant="secondary"
+                iconPos="left-4"
+              />
             </div>
           </div>
         </div>

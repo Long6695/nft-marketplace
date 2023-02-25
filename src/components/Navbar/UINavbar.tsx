@@ -43,16 +43,15 @@ export const UINavbar = (): JSX.Element => {
           <h5 className="text-base">Connect a wallet</h5>
         </Link>
         <div className="w-[152px] h-[60px]">
-          <Link href="/sign-up">
-            <UIButton
-              iconSize={20}
-              title="Sign Up"
-              // imgAlt="sign-up"
-              // imgSrc="/images/user-white.png"
-              variant="secondary"
-              iconPos="left-4"
-            />
-          </Link>
+          <UIButton
+            href="/sign-up"
+            iconSize={20}
+            title="Sign Up"
+            // imgAlt="sign-up"
+            // imgSrc="/images/user-white.png"
+            variant="secondary"
+            iconPos="left-4"
+          />
         </div>
       </div>
     </div>

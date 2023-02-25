@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import Avatar from '../Avatar'
-import { UIText } from '../Text/UIText'
+import Avatar from '../../Avatar'
+import { UIText } from '../../Text/UIText'
 
 const UITrendingSection = (): JSX.Element => {
   return (

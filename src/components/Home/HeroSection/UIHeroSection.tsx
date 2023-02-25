@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
-import UIButton from '../Button/UIButton'
-import { UIText } from '../Text/UIText'
-import { UITitle } from '../Text/UITitle'
+import UIButton from '../../Button/UIButton'
+import { UIText } from '../../Text/UIText'
+import { UITitle } from '../../Text/UITitle'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
-import Avatar from '../Avatar'
+import Avatar from '../../Avatar'
 
 const UIHeroSection = (): JSX.Element => {
   const { isMobile, isTablet, isDesktop } = useMediaQuery()
@@ -30,6 +30,7 @@ const UIHeroSection = (): JSX.Element => {
       <>
         <div className="w-full h-[60px] tablet:w-[224px] my-8">
           <UIButton
+            href="/"
             iconSize={20}
             title="Get Started"
             imgAlt="rocket"
@@ -54,7 +55,7 @@ const UIHeroSection = (): JSX.Element => {
           text="NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists."
           customStyle="text-base tablet-h5 mt-2"
         />
-        {isDesktop && renderActionButton()}
+        {(isDesktop || isTablet) && renderActionButton()}
       </div>
       <div className="flex flex-col">
         <div className="relative w-[330px] h-[221px] desktop:w-[510px] desktop:h-[401px]">
@@ -63,7 +64,7 @@ const UIHeroSection = (): JSX.Element => {
         <div className="bg-black-color-secondary rounded-b-[20px] p-4 flex flex-col items-start">
           <Avatar title="Space walker" name="Animakid" />
         </div>
-        {(isMobile || isTablet) && renderActionButton()}
+        {isMobile && renderActionButton()}
       </div>
     </div>
   )
