@@ -82,4 +82,7 @@ body {
   .btn-outlined-tertiary {
     @apply btn-default-text h-[46px] btn-default-style bg-transparent border-call-to-action-color border-2;
   }
+  .btn-outlined-headline {
+    @apply btn-default-text h-[60px] btn-default-style bg-transparent border-call-to-action-color border-2;
+  }
 }

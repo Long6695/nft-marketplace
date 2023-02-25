@@ -1,6 +1,6 @@
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import React from 'react'
-import { UIText } from '../Text/UIText'
+import UISectionHeadline from '../../Text/UISectionHeadline'
 import UITrendingSection from './UITrendingSection'
 
 const UITrendingCollection = (): JSX.Element => {
@@ -14,10 +14,9 @@ const UITrendingCollection = (): JSX.Element => {
 
   return (
     <div>
-      <UIText text="Trending Collection" customStyle="text-h4 tablet:text-h3" />
-      <UIText
-        text="Checkout our weekly updated trending collection."
-        customStyle="text-base tablet:text-h5"
+      <UISectionHeadline
+        title="Trending Collection"
+        description="Checkout our weekly updated trending collection."
       />
       <div className="flex justify-evenly mt-10">
         {isMobile && getTrendingSections(1)}
