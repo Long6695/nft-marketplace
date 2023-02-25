@@ -1,8 +1,8 @@
 import React from 'react'
 const PageNotFound = (): JSX.Element => {
   return (
-    <div className="w-screen h-screen bg-black-color flex justify-center items-center">
-      <p className="text-h1 text-white-color">Page Not Found</p>
+    <div className="w-full h-full flex justify-center items-center">
+      <p className="text-h1">Page Not Found</p>
     </div>
   )
 }
