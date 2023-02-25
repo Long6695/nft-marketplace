@@ -2,11 +2,11 @@ import React, { type ReactNode } from 'react'
 import { UINavbarMobile, UINavbar } from '@/components'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 
-export default function Layout({
-  children,
-}: {
+interface LayoutProps {
   children: ReactNode
-}): JSX.Element {
+}
+
+export default function Layout({ children }: LayoutProps): JSX.Element {
   const { isMobile, isTablet } = useMediaQuery()
   return (
     <div className="relative h-screen">

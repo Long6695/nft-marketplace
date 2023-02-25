@@ -27,7 +27,7 @@ class ErrorBoundary extends Component<Props, State> {
     throw new Error(error?.message)
   }
 
-  render(): JSX.Element | React.ReactNode {
+  render(): React.ReactNode {
     const { hasError } = this.state
     const { children } = this.props
     // Check if the error is thrown

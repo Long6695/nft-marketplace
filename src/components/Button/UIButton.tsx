@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-type Variant =
+type ButtonVariant =
   | 'tertiary'
   | 'primary'
   | 'secondary'
@@ -9,9 +9,9 @@ type Variant =
   | 'outlinedPrimary'
   | 'outlinedSecondary'
 
-interface Props {
-  variant?: Variant
-  onClick?: any
+interface UIButtonProps {
+  variant?: ButtonVariant
+  onClick?: () => void
   title: string
   imgSrc?: string
   imgAlt?: string
@@ -19,7 +19,7 @@ interface Props {
   iconPos?: string
 }
 
-const mapStyle: Record<Variant, string> = {
+const BUTTON_STYLE_MAP: Record<ButtonVariant, string> = {
   tertiary: 'btn-tertiary',
   primary: 'btn-primary',
   secondary: 'btn-secondary',
@@ -28,29 +28,27 @@ const mapStyle: Record<Variant, string> = {
   outlinedSecondary: 'btn-outlined-secondary',
 }
 
-const UIButton = ({
+const UIButton: React.FC<UIButtonProps> = ({
   variant = 'tertiary',
   onClick,
   title,
-  imgSrc = undefined,
-  imgAlt = undefined,
+  imgSrc,
+  imgAlt,
   iconSize = 35,
   iconPos = 'left-8',
-}: Props): JSX.Element => {
-  if (imgSrc !== undefined && imgAlt !== undefined) {
-    return (
-      <div className="relative">
+}) => {
+  return (
+    <button
+      className={`${imgSrc && imgAlt ? 'relative' : ''} ${
+        BUTTON_STYLE_MAP[variant]
+      }`}
+      onClick={onClick}
+    >
+      {imgSrc && imgAlt && (
         <div className={`absolute top-1/2 ${iconPos} -translate-y-1/2`}>
           <Image src={imgSrc} alt={imgAlt} width={iconSize} height={iconSize} />
         </div>
-        <button className={`${mapStyle[variant]}`} onClick={onClick}>
-          {title}
-        </button>
-      </div>
-    )
-  }
-  return (
-    <button className={`${mapStyle[variant]}`} onClick={onClick}>
+      )}
       {title}
     </button>
   )
