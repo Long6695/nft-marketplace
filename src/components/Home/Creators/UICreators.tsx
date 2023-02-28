@@ -1,3 +1,4 @@
+import WrapperCards from '@/components/WrapperCards'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import React from 'react'
 import UIButton from '../../Button/UIButton'
@@ -32,7 +33,7 @@ const UICreators = (): JSX.Element => {
           </div>
         )}
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-[30px] mt-10 tablet:mt-20">
+      <WrapperCards>
         {Array.from({ length: isDesktop ? 12 : 6 }, (_, idx) => {
           return isDesktop ? (
             <UICardCreator key={idx} order={idx + 1} />
@@ -40,7 +41,7 @@ const UICreators = (): JSX.Element => {
             <UICardCreatorMobile key={idx} order={idx + 1} />
           )
         })}
-      </div>
+      </WrapperCards>
       {isMobile && <div className="w-full mt-10">{renderButtonAction()}</div>}
     </div>
   )
