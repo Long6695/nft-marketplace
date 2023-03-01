@@ -16,6 +16,7 @@ const UICreators = (): JSX.Element => {
       title="View Rankings"
       variant="outlinedHeadline"
       iconSize={20}
+      isCenter
     />
   )
   return (

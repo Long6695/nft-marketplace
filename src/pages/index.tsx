@@ -1,8 +1,9 @@
 import React from 'react'
-import UIHeroSection from '@/components/Home/HeroSection/UIHeroSection'
-import UITrendingCollection from '@/components/Home/Trending/UITrendingCollection'
-import UICreators from '@/components/Home/Creators/UICreators'
-import UICategories from '@/components/Home/Categories/UICategories'
+import UIHeroSection from '@/components/Home/HeroSection'
+import UITrendingCollection from '@/components/Home/Trending'
+import UICreators from '@/components/Home/Creators'
+import UICategories from '@/components/Home/Categories'
+import UIDiscover from '@/components/Home/Discover'
 
 export default function Home(): JSX.Element {
   return (
@@ -11,6 +12,7 @@ export default function Home(): JSX.Element {
       <UITrendingCollection />
       <UICreators />
       <UICategories />
+      <UIDiscover />
     </div>
   )
 }
