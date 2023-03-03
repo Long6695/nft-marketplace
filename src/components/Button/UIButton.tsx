@@ -20,6 +20,7 @@ interface UIButtonProps {
   imgAlt?: string
   iconSize?: number
   iconPos?: string
+  isCenter?: boolean
 }
 
 const BUTTON_STYLE_MAP: Record<ButtonVariant, string> = {
@@ -41,6 +42,7 @@ const UIButton: React.FC<UIButtonProps> = ({
   iconSize = 35,
   iconPos = 'left-8',
   href,
+  isCenter,
 }) => {
   const renderButton = (): JSX.Element => (
     <button
@@ -49,14 +51,43 @@ const UIButton: React.FC<UIButtonProps> = ({
       }`}
       onClick={onClick}
     >
-      {imgSrc && imgAlt && (
-        <div className={`absolute top-1/2 ${iconPos} -translate-y-1/2`}>
-          <Image src={imgSrc} alt={imgAlt} width={iconSize} height={iconSize} />
-        </div>
-      )}
-      {title}
+      {renderContent()}
     </button>
   )
+  const renderContent = (): JSX.Element => {
+    if (isCenter) {
+      return (
+        <div className="flex items-center justify-center">
+          {imgSrc && imgAlt && (
+            <div className="mr-4">
+              <Image
+                src={imgSrc}
+                alt={imgAlt}
+                width={iconSize}
+                height={iconSize}
+              />
+            </div>
+          )}
+          {title}
+        </div>
+      )
+    }
+    return (
+      <>
+        {imgSrc && imgAlt && (
+          <div className={`absolute top-1/2 ${iconPos} -translate-y-1/2`}>
+            <Image
+              src={imgSrc}
+              alt={imgAlt}
+              width={iconSize}
+              height={iconSize}
+            />
+          </div>
+        )}
+        {title}
+      </>
+    )
+  }
   if (!href) return renderButton()
   return <Link href={href}>{renderButton()}</Link>
 }
