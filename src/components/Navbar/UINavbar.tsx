@@ -20,7 +20,7 @@ export const UINavbar = (): JSX.Element => {
   }
 
   return (
-    <div className="relative flex items-center justify-between py-6 px-8">
+    <div className="relative flex items-center justify-between py-6">
       <Link href="/">
         <div className="flex items-center">{renderLogo()}</div>
       </Link>

@@ -2,12 +2,12 @@ import WrapperCards from '@/components/WrapperCards'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import React from 'react'
 import UIButton from '../../Button/UIButton'
-import UISectionHeadline from '../../Text/UISectionHeadline'
+import WrapperHeaderSection from '../HeroSection/WrapperHeaderSection'
 import UICardCreator from './UICardCreator'
 import UICardCreatorMobile from './UICardCreatorMobile'
 
 const UICreators = (): JSX.Element => {
-  const { isMobile, isTablet, isDesktop } = useMediaQuery()
+  const { isMobile, isDesktop } = useMediaQuery()
   const renderButtonAction = (): JSX.Element => (
     <UIButton
       href="/rankings"
@@ -21,28 +21,22 @@ const UICreators = (): JSX.Element => {
   )
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col items-end tablet:flex-row">
-        <div className="flex flex-col flex-1">
-          <UISectionHeadline
-            title="Top Creators"
-            description="Checkout Top Rated Creators on the NFT Marketplace"
-          />
-        </div>
-        {(isDesktop || isTablet) && (
-          <div className="flex flex-1 desktop:flex-none justify-end">
-            <div className="tablet:w-[247px]">{renderButtonAction()}</div>
-          </div>
-        )}
+      <WrapperHeaderSection
+        title="Top Creators"
+        description="Checkout Top Rated Creators on the NFT Marketplace"
+        customAction={renderButtonAction}
+      />
+      <div className="flex justify-center">
+        <WrapperCards>
+          {Array.from({ length: isDesktop ? 12 : 6 }, (_, idx) => {
+            return isDesktop ? (
+              <UICardCreator key={idx} order={idx + 1} />
+            ) : (
+              <UICardCreatorMobile key={idx} order={idx + 1} />
+            )
+          })}
+        </WrapperCards>
       </div>
-      <WrapperCards>
-        {Array.from({ length: isDesktop ? 12 : 6 }, (_, idx) => {
-          return isDesktop ? (
-            <UICardCreator key={idx} order={idx + 1} />
-          ) : (
-            <UICardCreatorMobile key={idx} order={idx + 1} />
-          )
-        })}
-      </WrapperCards>
       {isMobile && <div className="w-full mt-10">{renderButtonAction()}</div>}
     </div>
   )

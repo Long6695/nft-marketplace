@@ -10,6 +10,7 @@ type ButtonVariant =
   | 'outlinedPrimary'
   | 'outlinedSecondary'
   | 'outlinedHeadline'
+  | 'white'
 
 interface UIButtonProps {
   variant?: ButtonVariant
@@ -31,6 +32,7 @@ const BUTTON_STYLE_MAP: Record<ButtonVariant, string> = {
   outlinedPrimary: 'btn-outlined-primary',
   outlinedSecondary: 'btn-outlined-secondary',
   outlinedHeadline: 'btn-outlined-headline',
+  white: 'btn-white',
 }
 
 const UIButton: React.FC<UIButtonProps> = ({

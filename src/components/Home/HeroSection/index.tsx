@@ -49,7 +49,7 @@ const UIHeroSection = (): JSX.Element => {
   }
   return (
     <div className="w-full flex flex-col items-center tablet:flex-row tablet:items-start tablet:justify-center gap-8">
-      <div className="flex flex-col items-start desktop:w-[510px]">
+      <div className="flex flex-col items-start w-[330px] desktop:w-[510px]">
         <UITitle variant="h1" title="Discover Digital Art & Collect NFTs" />
         <UIText
           text="NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists."

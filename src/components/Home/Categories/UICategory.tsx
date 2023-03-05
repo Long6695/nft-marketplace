@@ -6,7 +6,7 @@ import React from 'react'
 const UICategory = (): JSX.Element => {
   const { isDesktop } = useMediaQuery()
   return (
-    <div className="flex flex-col rounded-t-lg w-[150px] h-[209px] desktop:w-[240px] desktop:h-[316px]">
+    <div className="flex flex-col rounded-t-lg w-[147px] h-[209px] desktop:w-[240px] desktop:h-[316px]">
       <div className="relative">
         <Image
           src="/images/category.png"

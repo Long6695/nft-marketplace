@@ -24,7 +24,11 @@ export const UINavbarMobile = (): JSX.Element => {
     renderIcon: () => JSX.Element
   }): JSX.Element => {
     return (
-      <div className="flex items-center justify-between py-6 px-8">
+      <div
+        className={`flex items-center justify-between py-6 ${
+          isOpen ? 'px-8' : 'px-0'
+        }`}
+      >
         <Link href="/">
           <div className="flex items-center">{renderLogo()}</div>
         </Link>

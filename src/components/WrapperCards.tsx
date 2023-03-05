@@ -7,7 +7,7 @@ const WrapperCards = ({
 }): JSX.Element => {
   return (
     <div
-      className={`flex flex-wrap justify-center gap-[30px] mt-10 tablet:flex-row tablet:mt-20`}
+      className={`flex flex-wrap justify-center gap-[20px] mt-10 tablet:flex-row tablet:mt-20 w-[315px] tablet:w-[690px] desktop:w-full`}
     >
       {children}
     </div>
