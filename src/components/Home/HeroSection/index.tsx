@@ -58,8 +58,13 @@ const UIHeroSection = (): JSX.Element => {
         {(isDesktop || isTablet) && renderActionButton()}
       </div>
       <div className="flex flex-col">
-        <div className="relative w-[330px] h-[221px] desktop:w-[510px] desktop:h-[401px]">
-          <Image src="/images/hero-section.png" fill alt="hero-section" />
+        <div>
+          <Image
+            src="/images/hero-section.png"
+            width={isDesktop ? 501 : 330}
+            height={isDesktop ? 401 : 221}
+            alt="hero-section"
+          />
         </div>
         <div className="bg-black-color-secondary rounded-b-[20px] p-4 flex flex-col items-start">
           <Avatar title="Space walker" name="Animakid" />
