@@ -10,7 +10,6 @@ const UITrendingSection = (): JSX.Element => {
         <div className=" h-[330px] rounded-lg">
           <Image
             src="/images/trending.png"
-            priority
             width={330}
             height={330}
             alt="trending-card"
@@ -19,14 +18,12 @@ const UITrendingSection = (): JSX.Element => {
         <div className="w-[330px] flex gap-4 mt-5">
           <Image
             src="/images/trending.png"
-            priority
             width={100}
             height={100}
             alt="trending-card"
           />
           <Image
             src="/images/trending.png"
-            priority
             width={100}
             height={100}
             alt="trending-card"

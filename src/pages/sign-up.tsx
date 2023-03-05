@@ -22,7 +22,6 @@ const SignUpPage = (): JSX.Element => {
           fill
           sizes="(min-width: 375px) 100vw,
               (min-width: 834px) 50vw"
-          priority
           src="/images/signup-bg.png"
           alt="sign up background"
         />
