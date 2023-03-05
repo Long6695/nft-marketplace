@@ -5,7 +5,7 @@ import { UIText } from '../../Text/UIText'
 
 const UITrendingSection = (): JSX.Element => {
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="flex flex-col items-center">
       <div className="w-[330px]">
         <div className=" h-[330px] rounded-lg">
           <Image
@@ -16,7 +16,7 @@ const UITrendingSection = (): JSX.Element => {
             alt="trending-card"
           />
         </div>
-        <div className="w-330px flex gap-4 mt-5">
+        <div className="w-[330px] flex gap-4 mt-5">
           <Image
             src="/images/trending.png"
             priority

@@ -10,7 +10,7 @@ const ConnectWalletPage = (): JSX.Element => {
 
   return (
     <div className="flex flex-col tablet:flex-row tablet:justify-between tablet:gap-10 desktop:gap-[60px]">
-      <div className="relative w-screen h-[232px] tablet:w-1/2 tablet:h-screen">
+      <div className="relative w-screen h-[232px] tablet:w-1/2 tablet:h-[642px]">
         <Image
           fill
           sizes="(min-width: 375px) 100vw,
@@ -20,11 +20,11 @@ const ConnectWalletPage = (): JSX.Element => {
           alt="sign up background"
         />
       </div>
-      <div className="flex flex-col items-center tablet:flex tablet:w-[325px] tablet:flex-1 tablet:items-start desktop:w-[460px] gap-5 m-10">
+      <div className="flex flex-col items-center tablet:flex-1 tablet:items-start gap-5 m-10">
         <UITitle title={CW_TITLE} variant="h2" />
         <UIText text={CW_DESCRIPTION} />
 
-        <div className="flex flex-col gap-5 mt-5 w-[315px] tablet:w-[325px] desktop:w-[330px] desktop:gap-10">
+        <div className="w-full flex flex-col gap-5 mt-5 desktop:gap-10">
           <UIButton
             imgSrc="/images/metamask.png"
             imgAlt="metamask"

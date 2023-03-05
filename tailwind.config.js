@@ -2,9 +2,17 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    container: {
+      center: true,
+      screens: {
+        sm: '315px',
+        md: '690px',
+        lg: '1280px',
+      },
+    },
     screens: {
-      mobile: '375px',
-      tablet: '834px',
+      mobile: '315px',
+      tablet: '690px',
       desktop: '1280px',
     },
     fontSize: {

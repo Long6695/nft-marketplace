@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --desktop-screen: 1280px;
-  --tablet-screen: 834px;
-  --mobile-screen: 375px;
-
   /* background & text color */
   --black: #2b2b2b;
   --black-secondary: #3b3b3b;
@@ -37,11 +33,7 @@
   --base: 1rem;
   --caption: 0.75rem;
 }
-
 body {
-  max-width: var(--desktop-screen);
-  min-height: 100vh;
-
   background-color: var(--black);
   color: var(--white);
 
@@ -49,8 +41,6 @@ body {
   font-family: 'Work Sans', sans-serif;
   font-weight: var(--font-weight-400);
   line-height: var(--h5-line-height);
-
-  margin: auto;
 }
 
 @layer components {
@@ -84,5 +74,8 @@ body {
   }
   .btn-outlined-headline {
     @apply btn-default-text h-[60px] btn-default-style bg-transparent border-call-to-action-color border-2;
+  }
+  .btn-white {
+    @apply btn-default-text h-[60px] text-black btn-default-style bg-white border-call-to-action-color border-2;
   }
 }
