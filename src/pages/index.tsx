@@ -6,6 +6,7 @@ import UICategories from '@/components/Home/Categories'
 import UIDiscover from '@/components/Home/Discover'
 import UIHighlight from '@/components/Home/Highlight'
 import UIHowItWorks from '@/components/Home/HowItWorks'
+import UIWeeklyDigest from '@/components/Home/WeeklyDigest'
 
 export default function Home(): JSX.Element {
   return (
@@ -20,6 +21,7 @@ export default function Home(): JSX.Element {
       <UIHighlight />
       <div className="container flex flex-col gap-[150px]">
         <UIHowItWorks />
+        <UIWeeklyDigest />
       </div>
     </div>
   )
