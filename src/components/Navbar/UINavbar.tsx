@@ -12,7 +12,7 @@ export const UINavbar = (): JSX.Element => {
     return (
       <>
         <Image src="/images/logo.png" width={32} height={32} alt="logo" />
-        <h4 className="text-base font-space ml-2 desktop:text-h5">
+        <h4 className="text-base font-spaceMono ml-2 desktop:text-h5">
           {H_NAV_LOGO}
         </h4>
       </>
@@ -29,7 +29,7 @@ export const UINavbar = (): JSX.Element => {
           <h5
             className={`${
               router.pathname === '/marketplace'
-                ? 'text-base text-call-to-action-color'
+                ? 'text-base text-call-to-action'
                 : 'text-base'
             }`}
           >

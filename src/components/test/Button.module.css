@@ -1,0 +1,60 @@
+.root {
+  @apply inline-flex items-center justify-center rounded-full font-semibold duration-150 disabled:pointer-events-none disabled:opacity-75;
+}
+
+.fullWidth {
+  @apply w-full;
+}
+
+/*
+   * SIZES
+   */
+.sm {
+  @apply min-h-[46px];
+}
+
+.md {
+  @apply min-h-[60px];
+}
+
+.lg {
+  @apply min-h-[72px];
+}
+
+/*
+   * VARIANTS & COLORS
+   */
+.filled.tertiary {
+  @apply bg-[#18824b] text-[#FFFFFF] hover:bg-[#EE9F04];
+}
+
+.filled.primary {
+  @apply bg-[#FAA806] text-[#FFFFFF] hover:bg-[#EE9F04];
+}
+
+.filled.secondary {
+  @apply bg-[#373E4B] text-[#97A3B7] hover:bg-[#343A47];
+}
+
+.outlined.tertiary {
+  @apply border-[#0d5234] text-[#FAA806];
+}
+
+.outlined.primary {
+  @apply border-[#FAA806] text-[#FAA806];
+}
+
+.outlined.secondary {
+  @apply border-[#373E4B] text-[#373E4B];
+}
+
+/*
+   * LOADING INDICATOR
+   */
+.primary .spinner {
+  @apply fill-[#bc7e03] text-white;
+}
+
+.secondary .spinner {
+  @apply fill-[#292e38] text-white;
+}

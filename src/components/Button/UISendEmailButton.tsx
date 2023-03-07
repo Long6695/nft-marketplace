@@ -11,7 +11,7 @@ const UISendEmailButton = (): JSX.Element => {
           placeholder="Enter your email here"
           className="px-4 rounded-full h-[46px] focus:outline-none"
         />
-        <button className="text-h5 h-[46px] btn-default-style bg-call-to-action-color">
+        <button className="text-h5 h-[46px] btn-default-style bg-call-to-action">
           Subscribe
         </button>
       </div>

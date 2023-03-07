@@ -19,7 +19,7 @@ const UIHeroSection = (): JSX.Element => {
       <div className="flex flex-col">
         <UIText
           text={qty}
-          customStyle="font-semibold font-space text-h5 desktop:text-h4"
+          customStyle="font-semibold font-spaceMono text-h5 desktop:text-h4"
         />
         <UIText text={text} customStyle="text-base desktop:text-h5" />
       </div>
@@ -66,7 +66,7 @@ const UIHeroSection = (): JSX.Element => {
             alt="hero-section"
           />
         </div>
-        <div className="bg-black-color-secondary rounded-b-[20px] p-4 flex flex-col items-start">
+        <div className="bg-black-secondary rounded-b-[20px] p-4 flex flex-col items-start">
           <Avatar title="Space walker" name="Animakid" />
         </div>
         {isMobile && renderActionButton()}

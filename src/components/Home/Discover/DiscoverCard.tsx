@@ -15,26 +15,26 @@ const DiscoverCard = (): JSX.Element => {
         height={isMobile ? 238 : 300}
         alt="discover"
       />
-      <div className="flex flex-col w-full bg-black-color-secondary rounded-b-2xl p-4">
+      <div className="flex flex-col w-full bg-black-secondary rounded-b-2xl p-4">
         <Avatar name="Mr Fox" title="DSNG Animals" />
         <div className="flex justify-between mt-2">
           <div>
             <UIText
-              customStyle="font-space text-caption text-gray-color"
+              customStyle="font-spaceMono text-caption text-gray"
               text="Price"
             />
             <UIText
-              customStyle="font-space text-caption text-white-color"
+              customStyle="font-spaceMono text-caption text-white"
               text="1.63 ETH"
             />
           </div>
           <div>
             <UIText
-              customStyle="font-space text-caption text-gray-color"
+              customStyle="font-spaceMono text-caption text-gray"
               text="Highest Bid"
             />
             <UIText
-              customStyle="font-space text-caption text-white-color"
+              customStyle="font-spaceMono text-caption text-white"
               text="0.33 wETH"
             />
           </div>

@@ -41,7 +41,7 @@ export const UINavbarMobile = (): JSX.Element => {
     return (
       <>
         <Image src="/images/logo.png" width={24} height={24} alt="logo" />
-        <h4 className="text-base font-space ml-2 desktop:text-h5">
+        <h4 className="text-base font-spaceMono ml-2 desktop:text-h5">
           {H_NAV_LOGO}
         </h4>
       </>
@@ -51,7 +51,7 @@ export const UINavbarMobile = (): JSX.Element => {
   const renderMenu = (): JSX.Element | null => {
     if (isOpen) {
       return (
-        <div className="absolute inset-0 bg-black-color z-50">
+        <div className="absolute inset-0 bg-black z-50">
           {renderHeaderBar({
             renderIcon: () => (
               <div className="pl-2">

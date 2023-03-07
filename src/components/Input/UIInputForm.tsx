@@ -44,7 +44,7 @@ export const UIInputForm = ({
         <input
           id={fieldName}
           placeholder={placeHolder}
-          className="w-full h-[46px] text-black-color text-base placeholder:text-base rounded-full pl-10"
+          className="w-full h-[46px] text-black text-base placeholder:text-base rounded-full pl-10"
           aria-invalid={errors[fieldName] === undefined ? 'true' : 'false'}
           {...register(fieldName, {
             required: {
