@@ -1,0 +1,48 @@
+.root {
+  @apply inline-flex items-center justify-center font-semibold duration-150 disabled:pointer-events-none disabled:opacity-75;
+}
+
+.fullWidth {
+  @apply w-full;
+}
+
+/*
+   * SIZES
+   */
+.sm {
+  @apply min-h-[46px] rounded-full text-default;
+}
+
+.md {
+  @apply min-h-[60px] rounded-[20px] text-default;
+}
+
+.lg {
+  @apply min-h-[72px] rounded-[20px] text-h5;
+}
+
+/*
+   * VARIANTS & COLORS
+   */
+.filled {
+  @apply bg-call-to-action text-[#FFFFFF];
+}
+
+.outlined {
+  @apply border-solid border-2 border-call-to-action text-[#FFFFFF];
+}
+
+.filled-white {
+  @apply bg-white text-black;
+}
+
+/*
+   * LOADING INDICATOR
+   */
+.primary .spinner {
+  @apply fill-[#bc7e03] text-white;
+}
+
+.secondary .spinner {
+  @apply fill-[#292e38] text-white;
+}

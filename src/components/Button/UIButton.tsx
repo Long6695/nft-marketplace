@@ -1,97 +1,45 @@
+import s from './Button.module.css'
 import React from 'react'
+import cn from 'classnames'
 import Image from 'next/image'
-import Link from 'next/link'
 
-type ButtonVariant =
-  | 'tertiary'
-  | 'primary'
-  | 'secondary'
-  | 'outlinedTertiary'
-  | 'outlinedPrimary'
-  | 'outlinedSecondary'
-  | 'outlinedHeadline'
-  | 'white'
+type ButtonVariant = 'filled' | 'outlined' | 'filled-white'
+type ButtonHeight = 'sm' | 'md' | 'lg'
 
-interface UIButtonProps {
+type ButtonProps = {
+  children: React.ReactNode
+  fullWidth?: boolean
+  loading?: boolean
   variant?: ButtonVariant
-  onClick?: () => void
-  title: string
-  href?: string
-  imgSrc?: string
-  imgAlt?: string
-  iconSize?: number
-  iconPos?: string
-  isCenter?: boolean
-}
+  height?: ButtonHeight
+  icon?: string
+  size?: number
+} & Omit<React.ComponentProps<'button'>, 'className'>
 
-const BUTTON_STYLE_MAP: Record<ButtonVariant, string> = {
-  tertiary: 'btn-tertiary',
-  primary: 'btn-primary',
-  secondary: 'btn-secondary',
-  outlinedTertiary: 'btn-outlined-tertiary',
-  outlinedPrimary: 'btn-outlined-primary',
-  outlinedSecondary: 'btn-outlined-secondary',
-  outlinedHeadline: 'btn-outlined-headline',
-  white: 'btn-white',
-}
+const UIButton = ({
+  children,
+  variant = 'filled',
+  fullWidth,
+  loading,
+  disabled,
+  height = 'md',
+  icon,
+  size = 20,
+  ...props
+}: ButtonProps): JSX.Element => {
+  const classes = cn(s.root, s[variant], s[height], {
+    [s.fullWidth]: fullWidth,
+    'min-w-20 px-4': !fullWidth,
+  })
 
-const UIButton: React.FC<UIButtonProps> = ({
-  variant = 'tertiary',
-  onClick,
-  title,
-  imgSrc,
-  imgAlt,
-  iconSize = 35,
-  iconPos = 'left-8',
-  href,
-  isCenter,
-}) => {
-  const renderButton = (): JSX.Element => (
-    <button
-      className={`${imgSrc && imgAlt ? 'relative' : ''} ${
-        BUTTON_STYLE_MAP[variant]
-      }`}
-      onClick={onClick}
-    >
-      {renderContent()}
+  return (
+    <button className={classes} {...props}>
+      <div className="mr-2">
+        {icon && <Image src={icon} alt={icon} width={size} height={size} />}
+      </div>
+      {children}
     </button>
   )
-  const renderContent = (): JSX.Element => {
-    if (isCenter) {
-      return (
-        <div className="flex items-center justify-center">
-          {imgSrc && imgAlt && (
-            <div className="mr-4">
-              <Image
-                src={imgSrc}
-                alt={imgAlt}
-                width={iconSize}
-                height={iconSize}
-              />
-            </div>
-          )}
-          {title}
-        </div>
-      )
-    }
-    return (
-      <>
-        {imgSrc && imgAlt && (
-          <div className={`absolute top-1/2 ${iconPos} -translate-y-1/2`}>
-            <Image
-              src={imgSrc}
-              alt={imgAlt}
-              width={iconSize}
-              height={iconSize}
-            />
-          </div>
-        )}
-        {title}
-      </>
-    )
-  }
-  if (!href) return renderButton()
-  return <Link href={href}>{renderButton()}</Link>
 }
 
 export default UIButton

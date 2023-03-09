@@ -1,5 +1,6 @@
 import WrapperCards from '@/components/WrapperCards'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
+import Link from 'next/link'
 import React from 'react'
 import UIButton from '../../Button/UIButton'
 import WrapperHeaderSection from '../HeroSection/WrapperHeaderSection'
@@ -9,15 +10,11 @@ import UICardCreatorMobile from './UICardCreatorMobile'
 const UICreators = (): JSX.Element => {
   const { isMobile, isDesktop } = useMediaQuery()
   const renderButtonAction = (): JSX.Element => (
-    <UIButton
-      href="/rankings"
-      imgSrc="/images/rocket-purple.png"
-      imgAlt="rocket"
-      title="View Rankings"
-      variant="outlinedHeadline"
-      iconSize={20}
-      isCenter
-    />
+    <Link href="/rankings" passHref>
+      <UIButton variant="outlined" fullWidth icon="/images/rocket-purple.png">
+        View Rankings
+      </UIButton>
+    </Link>
   )
   return (
     <div className="flex flex-col">

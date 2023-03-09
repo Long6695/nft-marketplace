@@ -7,6 +7,6 @@ export const UIText = ({
   customStyle?: React.ComponentProps<'p'>['className']
 }): JSX.Element => {
   const style =
-    customStyle !== undefined ? customStyle : 'text-base desktop:text-h5'
+    customStyle !== undefined ? customStyle : 'text-default desktop:text-h5'
   return <p className={style}>{text}</p>
 }

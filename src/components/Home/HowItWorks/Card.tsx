@@ -26,10 +26,10 @@ const Card = ({
       >
         <UIText
           text={title}
-          customStyle="font-semibold text-base desktop:text-h5 desktop:font-semibold"
+          customStyle="font-semibold text-default desktop:text-h5 desktop:font-semibold"
         />
         <UIText
-          customStyle="leading-4 text-caption mt-2 desktop:text-base"
+          customStyle="leading-4 text-small mt-2 desktop:text-default"
           text={description}
         />
       </div>

@@ -26,7 +26,7 @@ const SignUpPage = (): JSX.Element => {
           alt="sign up background"
         />
       </div>
-      <div className="flex flex-col items-center tablet:flex tablet:w-[325px] tablet:flex-1 tablet:items-start desktop:w-[460px] gap-5 m-10">
+      <div className="flex flex-col items-center tablet:w-[325px] tablet:flex-1 tablet:items-start desktop:w-[460px] gap-5 m-10">
         <UITitle title={SU_TITLE} variant="h2" />
         <UIText text={SU_DESCRIPTION} />
         <FormProvider {...method}>
@@ -46,7 +46,9 @@ const SignUpPage = (): JSX.Element => {
               ))}
               <input type="submit" hidden />
             </div>
-            <UIButton title="Create account" />
+            <UIButton variant="filled" fullWidth>
+              Create account
+            </UIButton>
           </form>
         </FormProvider>
       </div>

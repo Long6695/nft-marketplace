@@ -16,7 +16,7 @@ const Avatar = ({
       )}
       <div className="flex items-center gap-2">
         <Image src="/images/avatar.png" width={24} height={24} alt="avatar" />
-        <UIText text={name} customStyle="text-base" />
+        <UIText text={name} customStyle="text-default" />
       </div>
     </>
   )

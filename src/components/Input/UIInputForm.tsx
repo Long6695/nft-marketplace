@@ -44,7 +44,7 @@ export const UIInputForm = ({
         <input
           id={fieldName}
           placeholder={placeHolder}
-          className="w-full h-[46px] text-black text-base placeholder:text-base rounded-full pl-10"
+          className="w-full h-[46px] text-black text-default placeholder:text-default rounded-full pl-10"
           aria-invalid={errors[fieldName] === undefined ? 'true' : 'false'}
           {...register(fieldName, {
             required: {
@@ -83,7 +83,7 @@ export const UIInputForm = ({
           </div>
         )}
         {errors[fieldName] !== null && (
-          <span className="absolute top-[46px] left-0 text-caption text-red-500">
+          <span className="absolute top-[46px] left-0 text-small text-red-500">
             {errors[fieldName]?.message as string}
           </span>
         )}

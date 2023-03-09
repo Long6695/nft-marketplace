@@ -14,7 +14,7 @@ const UICardCreatorMobile = ({ order }: { order: number }): JSX.Element => {
         />
         <div className="absolute -top-2 -left-2 bg-black w-[30px] h-[30px] rounded-full flex items-center justify-center">
           <UIText
-            customStyle="text-base font-spaceMono text-gray"
+            customStyle="text-default font-spaceMono text-gray"
             text={`${order}`}
           />
         </div>
