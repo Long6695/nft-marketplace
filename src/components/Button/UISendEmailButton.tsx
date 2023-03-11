@@ -9,11 +9,11 @@ const UISendEmailButton = (): JSX.Element => {
       <div className="flex flex-col text-black gap-5 mt-5">
         <input
           placeholder="Enter your email here"
-          className="px-4 rounded-full h-[46px] focus:outline-none"
+          className="text-default px-4 rounded-full h-[46px] focus:outline-none"
         />
-        <button className="text-h5 h-[46px] btn-default-style bg-call-to-action-color">
+        <UIButton variant="filled" height="sm" fullWidth>
           Subscribe
-        </button>
+        </UIButton>
       </div>
     )
   }
@@ -23,7 +23,9 @@ const UISendEmailButton = (): JSX.Element => {
         placeholder="Enter your email here"
         className="px-4 focus:outline-none"
       />
-      <UIButton variant="primary" title="Subscribe" />
+      <UIButton variant="filled" height="lg" fullWidth>
+        Subscribe
+      </UIButton>
     </div>
   )
 }

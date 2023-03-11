@@ -17,7 +17,7 @@ const UISectionHeadline = ({
       {description && (
         <UIText
           text={description}
-          customStyle="text-base tablet:text-h5 w-[315px] tablet:w-[450px] desktop:w-full"
+          customStyle="text-default tablet:text-h5 w-[315px] tablet:w-[450px] desktop:w-full"
         />
       )}
     </div>

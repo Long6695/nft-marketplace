@@ -5,6 +5,7 @@ import { UIText } from '../../Text/UIText'
 import { UITitle } from '../../Text/UITitle'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import Avatar from '../../Avatar'
+import Link from 'next/link'
 
 const UIHeroSection = (): JSX.Element => {
   const { isMobile, isTablet, isDesktop } = useMediaQuery()
@@ -19,9 +20,9 @@ const UIHeroSection = (): JSX.Element => {
       <div className="flex flex-col">
         <UIText
           text={qty}
-          customStyle="font-semibold font-space text-h5 desktop:text-h4"
+          customStyle="font-semibold font-spaceMono text-h5 desktop:text-h4"
         />
-        <UIText text={text} customStyle="text-base desktop:text-h5" />
+        <UIText text={text} customStyle="text-default desktop:text-h5" />
       </div>
     )
   }
@@ -29,15 +30,16 @@ const UIHeroSection = (): JSX.Element => {
     return (
       <>
         <div className="w-full h-[60px] tablet:w-[224px] my-8">
-          <UIButton
-            href="/"
-            iconSize={20}
-            title="Get Started"
-            imgAlt="rocket"
-            imgSrc="/images/rocket-launch.png"
-            variant="primary"
-            iconPos="left-4"
-          />
+          <Link href="/" passHref>
+            <UIButton
+              title="Get Started"
+              variant="filled"
+              icon="/images/rocket-launch.png"
+              fullWidth
+            >
+              Get Started
+            </UIButton>
+          </Link>
         </div>
         <div className="w-full flex items-center justify-center tablet:justify-start gap-10 desktop:gap-20">
           {renderTotalSale({ qty: '240k+', text: 'Total Sale' })}
@@ -53,7 +55,7 @@ const UIHeroSection = (): JSX.Element => {
         <UITitle variant="h1" title="Discover Digital Art & Collect NFTs" />
         <UIText
           text="NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists."
-          customStyle="text-base tablet-h5 mt-2"
+          customStyle="text-default tablet-h5 mt-2"
         />
         {(isDesktop || isTablet) && renderActionButton()}
       </div>
@@ -66,7 +68,7 @@ const UIHeroSection = (): JSX.Element => {
             alt="hero-section"
           />
         </div>
-        <div className="bg-black-color-secondary rounded-b-[20px] p-4 flex flex-col items-start">
+        <div className="bg-black-secondary rounded-b-[20px] p-4 flex flex-col items-start">
           <Avatar title="Space walker" name="Animakid" />
         </div>
         {isMobile && renderActionButton()}

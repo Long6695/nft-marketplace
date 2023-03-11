@@ -2,6 +2,10 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      workSans: ['Work Sans', 'sans-serif'],
+      spaceMono: ['Space Mono', 'monospace'],
+    },
     container: {
       center: true,
       screens: {
@@ -16,77 +20,22 @@ module.exports = {
       desktop: '1280px',
     },
     fontSize: {
-      h1: [
-        'var(--h1)',
-        {
-          lineHeight: 'var(--h1-line-height)',
-          fontWeight: 'var(--font-weight-700)',
-        },
-      ],
-      h2: [
-        'var(--h2)',
-        {
-          lineHeight: 'var(--h2-line-height)',
-          fontWeight: 'var(--font-weight-600)',
-        },
-      ],
-      h3: [
-        'var(--h3)',
-        {
-          lineHeight: 'var(--h3-line-height)',
-          fontWeight: 'var(--font-weight-600)',
-        },
-      ],
-      h4: [
-        'var(--h4)',
-        {
-          lineHeight: 'var(--h4-line-height)',
-          fontWeight: 'var(--font-weight-400)',
-        },
-      ],
-      h5: [
-        'var(--h5)',
-        {
-          lineHeight: 'var(--h5-line-height)',
-          fontWeight: 'var(--font-weight-400)',
-        },
-      ],
-      base: [
-        'var(--base)',
-        {
-          lineHeight: 'var(--base-line-height)',
-          fontWeight: 'var(--font-weight-400)',
-        },
-      ],
-      caption: [
-        'var(--caption)',
-        {
-          lineHeight: 'var(--caption-line-height)',
-          fontWeight: 'var(--font-weight-400)',
-        },
-      ],
+      h1: ['var(--h1)', 'var(--h1-line-height)'],
+      h2: ['var(--h2)', 'var(--h2-line-height)'],
+      h3: ['var(--h3)', 'var(--h3-line-height)'],
+      h4: ['var(--h4)', 'var(--h4-line-height)'],
+      h5: ['var(--h5)', 'var(--h5-line-height)'],
+      default: ['var(--default)', 'var(--default-line-height)'],
+      small: ['var(--small)', 'var(--small-line-height)'],
     },
-    fontFamily: {
-      space: ['Space Mono', 'monospace'],
-      workSans: ['Work Sans', 'sans-serif'],
-    },
-    extend: {
-      backgroundImage: {
-        'gradient#1-bg-color': 'var(--gradient1)',
-        'gradient#2-bg-color': 'var(--gradient2)',
-        'black-bg-color': 'var(--black)',
-        'black-secondary-bg-color': 'var(--black-secondary)',
-        'gray-bg-color': 'var(--gray)',
-        'white-bg-color': 'var(--white)',
-        'call-to-action--bg-color': 'var(--call-to-action)',
-      },
-      colors: {
-        'black-color': 'var(--black)',
-        'black-color-secondary': 'var(--black-secondary)',
-        'gray-color': 'var(--gray)',
-        'white-color': 'var(--white)',
-        'call-to-action-color': 'var(--call-to-action)',
-      },
+    colors: {
+      'black-secondary': 'var(--black-secondary)',
+      'gradient#1': 'var(--gradient1)',
+      'gradient#2': 'var(--gradient2)',
+      black: 'var(--black)',
+      gray: 'var(--gray)',
+      white: 'var(--white)',
+      'call-to-action': 'var(--call-to-action)',
     },
   },
   plugins: [],

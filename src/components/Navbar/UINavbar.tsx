@@ -12,7 +12,7 @@ export const UINavbar = (): JSX.Element => {
     return (
       <>
         <Image src="/images/logo.png" width={32} height={32} alt="logo" />
-        <h4 className="text-base font-space ml-2 desktop:text-h5">
+        <h4 className="text-default font-spaceMono ml-2 desktop:text-h5">
           {H_NAV_LOGO}
         </h4>
       </>
@@ -29,29 +29,25 @@ export const UINavbar = (): JSX.Element => {
           <h5
             className={`${
               router.pathname === '/marketplace'
-                ? 'text-base text-call-to-action-color'
-                : 'text-base'
+                ? 'text-default text-call-to-action'
+                : 'text-default'
             }`}
           >
             Marketplace
           </h5>
         </Link>
         <Link href="/rankings">
-          <h5 className="text-base">Rankings</h5>
+          <h5 className="text-default">Rankings</h5>
         </Link>
         <Link href="/connect-wallet">
-          <h5 className="text-base">Connect a wallet</h5>
+          <h5 className="text-default">Connect a wallet</h5>
         </Link>
-        <div className="w-[152px] h-[60px]">
-          <UIButton
-            href="/sign-up"
-            iconSize={20}
-            title="Sign Up"
-            // imgAlt="sign-up"
-            // imgSrc="/images/user-white.png"
-            variant="secondary"
-            iconPos="left-4"
-          />
+        <div className="w-[152px]">
+          <Link href="/sign-up" passHref>
+            <UIButton variant="filled" icon="/images/user-white.png">
+              Sign Up
+            </UIButton>
+          </Link>
         </div>
       </div>
     </div>

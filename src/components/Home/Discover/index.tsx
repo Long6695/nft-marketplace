@@ -1,6 +1,7 @@
 import UIButton from '@/components/Button/UIButton'
 import WrapperCards from '@/components/WrapperCards'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
+import Link from 'next/link'
 import React from 'react'
 import WrapperHeaderSection from '../HeroSection/WrapperHeaderSection'
 import DiscoverCard from './DiscoverCard'
@@ -12,15 +13,11 @@ const UIDiscover = (): JSX.Element => {
   }
 
   const renderButtonAction = (): JSX.Element => (
-    <UIButton
-      href="/rankings"
-      imgSrc="/images/see-all.png"
-      imgAlt="see-all"
-      title="See All"
-      variant="outlinedHeadline"
-      iconSize={20}
-      isCenter
-    />
+    <Link href="/rankings" passHref>
+      <UIButton variant="outlined" fullWidth icon="/images/see-all.png">
+        See All
+      </UIButton>
+    </Link>
   )
 
   return (

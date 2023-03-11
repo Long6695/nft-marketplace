@@ -28,8 +28,8 @@ const UITrendingSection = (): JSX.Element => {
             height={100}
             alt="trending-card"
           />
-          <div className="w-[100px] bg-call-to-action-color rounded-md flex items-center justify-center">
-            <UIText customStyle="font-space text-h5" text="1025+" />
+          <div className="w-[100px] bg-call-to-action rounded-md flex items-center justify-center">
+            <UIText customStyle="font-spaceMono text-h5" text="1025+" />
           </div>
         </div>
         <div className="w-full flex flex-col items-start mt-5 px-2">

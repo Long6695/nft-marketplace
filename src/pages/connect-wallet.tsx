@@ -3,11 +3,8 @@ import Image from 'next/image'
 import { UIText, UITitle } from '@/components'
 import { CW_DESCRIPTION, CW_TITLE } from '@/constants/connect-wallet'
 import UIButton from '@/components/Button/UIButton'
-import { useMediaQuery } from '@/hooks/useMediaQuery'
 
 const ConnectWalletPage = (): JSX.Element => {
-  const { isMobile, isTablet } = useMediaQuery()
-
   return (
     <div className="flex flex-col tablet:flex-row tablet:justify-between tablet:gap-10 desktop:gap-[60px]">
       <div className="relative w-screen h-[232px] tablet:w-1/2 tablet:h-[642px]">
@@ -24,7 +21,20 @@ const ConnectWalletPage = (): JSX.Element => {
         <UIText text={CW_DESCRIPTION} />
 
         <div className="w-full flex flex-col gap-5 mt-5 desktop:gap-10">
+          <UIButton size={35} icon="/images/metamask.png" variant="outlined">
+            Metamask
+          </UIButton>
           <UIButton
+            size={35}
+            icon="/images/wallet-connect.png"
+            variant="outlined"
+          >
+            Wallet Connect
+          </UIButton>
+          <UIButton size={35} icon="/images/coinbase.png" variant="outlined">
+            Coinbase
+          </UIButton>
+          {/* <UIButton
             imgSrc="/images/metamask.png"
             imgAlt="metamask"
             variant={
@@ -47,7 +57,7 @@ const ConnectWalletPage = (): JSX.Element => {
               isMobile || isTablet ? 'outlinedSecondary' : 'outlinedPrimary'
             }
             title="Coinbase"
-          />
+          /> */}
         </div>
       </div>
     </div>

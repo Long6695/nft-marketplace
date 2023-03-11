@@ -26,10 +26,10 @@ const Card = ({
       >
         <UIText
           text={title}
-          customStyle="font-semibold text-base desktop:text-h5 desktop:font-semibold"
+          customStyle="font-semibold text-default desktop:text-h5 desktop:font-semibold"
         />
         <UIText
-          customStyle="leading-4 text-caption mt-2 desktop:text-base"
+          customStyle="leading-4 text-small mt-2 desktop:text-default"
           text={description}
         />
       </div>
@@ -38,7 +38,7 @@ const Card = ({
 
   if (isMobile) {
     return (
-      <div className="flex items-center w-[315px] h-[157px] rounded-xl bg-black-color-secondary p-4">
+      <div className="flex items-center w-[315px] h-[157px] rounded-xl bg-black-secondary p-4">
         <div>
           <Image src={image} width={83} height={83} alt="set up wallet" />
         </div>
@@ -48,7 +48,7 @@ const Card = ({
   }
 
   return (
-    <div className="flex flex-col items-center tablet:w-[210px] tablet:h-[320px] desktop:w-[330px] desktop:h-[440px] rounded-lg bg-black-color-secondary p-4">
+    <div className="flex flex-col items-center tablet:w-[210px] tablet:h-[320px] desktop:w-[330px] desktop:h-[440px] rounded-lg bg-black-secondary p-4">
       <div>
         <Image
           src={image}
