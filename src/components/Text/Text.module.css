@@ -1,0 +1,63 @@
+.work-sans {
+  @apply font-workSans;
+}
+
+.space-mono {
+  @apply font-spaceMono;
+}
+
+.space-mono .h1 {
+  @apply text-h1 font-bold;
+}
+
+.space-mono .h2 {
+  @apply text-h2 font-bold;
+}
+
+.space-mono .h3 {
+  @apply text-h3 font-bold;
+}
+
+.space-mono .h4 {
+  @apply text-h4 font-bold;
+}
+
+.space-mono .h5 {
+  @apply text-h5 font-bold;
+}
+
+.space-mono .small {
+  @apply text-small font-normal;
+}
+
+.space-mono .default {
+  @apply text-default font-normal;
+}
+
+.work-sans .h1 {
+  @apply text-h1 font-semibold;
+}
+
+.work-sans .h2 {
+  @apply text-h2 font-semibold;
+}
+
+.work-sans .h3 {
+  @apply text-h3 font-semibold;
+}
+
+.work-sans .h4 {
+  @apply text-h4 font-semibold;
+}
+
+.work-sans .h5 {
+  @apply text-h5 font-semibold;
+}
+
+.work-sans .small {
+  @apply text-small font-normal;
+}
+
+.work-sans .default {
+  @apply text-default font-normal;
+}

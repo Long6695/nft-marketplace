@@ -6,7 +6,7 @@ import UIButton from '@/components/Button/UIButton'
 
 const ConnectWalletPage = (): JSX.Element => {
   return (
-    <div className="flex flex-col tablet:flex-row tablet:justify-between tablet:gap-10 desktop:gap-[60px]">
+    <div className="container flex flex-col tablet:flex-row tablet:justify-between tablet:gap-10 desktop:gap-[60px]">
       <div className="relative w-screen h-[232px] tablet:w-1/2 tablet:h-[642px]">
         <Image
           fill
@@ -34,30 +34,6 @@ const ConnectWalletPage = (): JSX.Element => {
           <UIButton size={35} icon="/images/coinbase.png" variant="outlined">
             Coinbase
           </UIButton>
-          {/* <UIButton
-            imgSrc="/images/metamask.png"
-            imgAlt="metamask"
-            variant={
-              isMobile || isTablet ? 'outlinedSecondary' : 'outlinedPrimary'
-            }
-            title="Metamask"
-          />
-          <UIButton
-            imgSrc="/images/wallet-connect.png"
-            imgAlt="wallet-connect"
-            variant={
-              isMobile || isTablet ? 'outlinedSecondary' : 'outlinedPrimary'
-            }
-            title="Wallet Connect"
-          />
-          <UIButton
-            imgSrc="/images/coinbase.png"
-            imgAlt="coinbase"
-            variant={
-              isMobile || isTablet ? 'outlinedSecondary' : 'outlinedPrimary'
-            }
-            title="Coinbase"
-          /> */}
         </div>
       </div>
     </div>

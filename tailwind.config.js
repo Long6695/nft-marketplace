@@ -11,13 +11,13 @@ module.exports = {
       screens: {
         sm: '315px',
         md: '690px',
-        lg: '1280px',
+        lg: '1050px',
       },
     },
     screens: {
       mobile: '315px',
       tablet: '690px',
-      desktop: '1280px',
+      desktop: '1050px',
     },
     fontSize: {
       h1: ['var(--h1)', 'var(--h1-line-height)'],
@@ -36,6 +36,14 @@ module.exports = {
       gray: 'var(--gray)',
       white: 'var(--white)',
       'call-to-action': 'var(--call-to-action)',
+    },
+    extend: {
+      gap: {
+        150: '150px',
+      },
+      gridTemplateColumns: {
+        footer: '1.2fr 1fr 1.5fr',
+      },
     },
   },
   plugins: [],
