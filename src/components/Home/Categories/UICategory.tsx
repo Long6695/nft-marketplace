@@ -16,7 +16,12 @@ const UICategory = (): JSX.Element => {
         />
       </div>
       <div className="flex items-center justify-start rounded-b-2xl bg-black-secondary h-full py-2 px-4">
-        <UIText text="Art" />
+        <UIText
+          text="Art"
+          sizeMobile="default"
+          sizeTablet="default"
+          sizeDesktop="h5"
+        />
       </div>
     </div>
   )

@@ -10,10 +10,10 @@ const UICreatorInfo = ({
 }): JSX.Element => {
   return (
     <div className="flex flex-col flex-start desktop:text-center">
-      <UIText text={name} customStyle="font-semibold text-h5" />
+      <UIText text={name} onlySize="h5" />
       <div className="flex items-center gap-3">
-        <UIText text="Total sales:" customStyle="text-default text-gray" />
-        <UIText text={totalSales} customStyle="font-spaceMono text-default" />
+        <UIText text="Total sales:" color="gray" onlySize="default" />
+        <UIText text={totalSales} font="space-mono" onlySize="default" />
       </div>
     </div>
   )

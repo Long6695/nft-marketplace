@@ -28,21 +28,22 @@ module.exports = {
       default: ['var(--default)', 'var(--default-line-height)'],
       small: ['var(--small)', 'var(--small-line-height)'],
     },
-    colors: {
-      'black-secondary': 'var(--black-secondary)',
-      'gradient#1': 'var(--gradient1)',
-      'gradient#2': 'var(--gradient2)',
-      black: 'var(--black)',
-      gray: 'var(--gray)',
-      white: 'var(--white)',
-      'call-to-action': 'var(--call-to-action)',
-    },
+
     extend: {
       gap: {
         150: '150px',
       },
       gridTemplateColumns: {
         footer: '1.2fr 1fr 1.5fr',
+      },
+      colors: {
+        'black-secondary': 'var(--black-secondary)',
+        'gradient#1': 'var(--gradient1)',
+        'gradient#2': 'var(--gradient2)',
+        black: 'var(--black)',
+        gray: 'var(--gray)',
+        white: 'var(--white)',
+        'call-to-action': 'var(--call-to-action)',
       },
     },
   },

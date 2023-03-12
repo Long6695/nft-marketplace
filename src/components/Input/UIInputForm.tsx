@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { useFormContext } from 'react-hook-form'
-
+import { useMediaQuery } from '@/hooks/useMediaQuery'
+import cn from 'classnames'
 interface Props {
   imgSrc: string
   imgAlt: string
@@ -21,6 +22,7 @@ export const UIInputForm = ({
   validate,
   type,
 }: Props): JSX.Element => {
+  const { isDesktop } = useMediaQuery()
   const method = useFormContext()
   const {
     register,
@@ -44,7 +46,13 @@ export const UIInputForm = ({
         <input
           id={fieldName}
           placeholder={placeHolder}
-          className="w-full h-[46px] text-black text-default placeholder:text-default rounded-full pl-10"
+          className={cn(
+            'h-[46px] text-black text-default placeholder:text-default rounded-full pl-10',
+            {
+              'w-full': !isDesktop,
+              'w-1/2': isDesktop,
+            },
+          )}
           aria-invalid={errors[fieldName] === undefined ? 'true' : 'false'}
           {...register(fieldName, {
             required: {
@@ -65,7 +73,10 @@ export const UIInputForm = ({
         />
         {type === 'password' && (
           <div
-            className="absolute inset-y-0 right-0 flex items-center pr-3 pt-1"
+            className={cn('absolute inset-y-0 flex items-center pr-3 pt-1', {
+              'right-1/2': isDesktop,
+              'right-0': !isDesktop,
+            })}
             onClick={handleShowPassword}
           >
             <Image
@@ -83,7 +94,7 @@ export const UIInputForm = ({
           </div>
         )}
         {errors[fieldName] !== null && (
-          <span className="absolute top-[46px] left-0 text-small text-red-500">
+          <span className="absolute top-[46px] left-0 text-small text-orange-700">
             {errors[fieldName]?.message as string}
           </span>
         )}

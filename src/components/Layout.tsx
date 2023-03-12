@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
   const { isMobile, isTablet } = useMediaQuery()
   return (
     <div>
-      <div className="container">
+      <div className="max-w-[1280px] mx-auto px-5">
         {isMobile || isTablet ? <UINavbarMobile /> : <UINavbar />}
       </div>
       <div>{children}</div>
