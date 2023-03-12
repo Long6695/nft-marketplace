@@ -10,19 +10,21 @@ import UIWeeklyDigest from '@/components/Home/WeeklyDigest'
 
 export default function Home(): JSX.Element {
   return (
-    <div className="flex flex-col gap-[150px]">
-      <div className="container flex flex-col gap-[150px]">
+    <>
+      <div className="flex flex-col container gap-150">
         <UIHeroSection />
         <UITrendingCollection />
         <UICreators />
         <UICategories />
         <UIDiscover />
       </div>
-      <UIHighlight />
-      <div className="container flex flex-col gap-[150px]">
+      <div className="my-[100px]">
+        <UIHighlight />
+      </div>
+      <div className="flex flex-col container gap-150">
         <UIHowItWorks />
         <UIWeeklyDigest />
       </div>
-    </div>
+    </>
   )
 }

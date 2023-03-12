@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { H_NAV_LOGO } from '@/constants/home'
 import Link from 'next/link'
 import UIButton from '../Button/UIButton'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/router'
+import UILogo from '../Logo'
 
 export const UINavbarMobile = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,21 +30,10 @@ export const UINavbarMobile = (): JSX.Element => {
         }`}
       >
         <Link href="/">
-          <div className="flex items-center">{renderLogo()}</div>
+          <UILogo />
         </Link>
         {renderIcon()}
       </div>
-    )
-  }
-
-  const renderLogo = (): JSX.Element => {
-    return (
-      <>
-        <Image src="/images/logo.png" width={24} height={24} alt="logo" />
-        <h4 className="text-default font-spaceMono ml-2 desktop:text-h5">
-          {H_NAV_LOGO}
-        </h4>
-      </>
     )
   }
 

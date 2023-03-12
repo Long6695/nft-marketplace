@@ -16,7 +16,7 @@ const SignUpPage = (): JSX.Element => {
     console.log(data)
   }
   return (
-    <div className="flex flex-col tablet:flex-row tablet:justify-between tablet:gap-10 desktop:gap-[60px]">
+    <div className="container flex flex-col tablet:flex-row tablet:justify-between tablet:gap-10 desktop:gap-[60px]">
       <div className="relative w-screen h-[232px] tablet:w-1/2 tablet:h-screen">
         <Image
           fill
