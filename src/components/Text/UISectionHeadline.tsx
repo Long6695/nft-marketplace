@@ -6,16 +6,20 @@ const UISectionHeadline = ({
   description,
 }: {
   title: string
-  description: string
+  description?: string
 }): JSX.Element => {
   return (
-    <>
-      <UIText
-        text={title}
-        customStyle="font-semibold text-h4 tablet:text-h3 mb-3"
-      />
-      <UIText text={description} customStyle="text-base tablet:text-h5" />
-    </>
+    <div>
+      <UIText text={title} sizeMobile="h4" sizeTablet="h4" sizeDesktop="h3" />
+      {description && (
+        <UIText
+          text={description}
+          sizeMobile="default"
+          sizeTablet="default"
+          sizeDesktop="h5"
+        />
+      )}
+    </div>
   )
 }
 

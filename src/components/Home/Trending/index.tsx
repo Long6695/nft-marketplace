@@ -1,6 +1,6 @@
+import WrapperHeaderSection from '@/components/Home/HeroSection/WrapperHeaderSection'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import React from 'react'
-import UISectionHeadline from '../../Text/UISectionHeadline'
 import UITrendingSection from './UITrendingSection'
 
 const UITrendingCollection = (): JSX.Element => {
@@ -14,11 +14,11 @@ const UITrendingCollection = (): JSX.Element => {
 
   return (
     <div>
-      <UISectionHeadline
+      <WrapperHeaderSection
         title="Trending Collection"
         description="Checkout our weekly updated trending collection."
       />
-      <div className="flex justify-evenly mt-10">
+      <div className="flex gap-5 items-center justify-center mt-10">
         {isMobile && getTrendingSections(1)}
         {isTablet && getTrendingSections(2)}
         {isDesktop && getTrendingSections(3)}

@@ -1,19 +1,20 @@
-import React, { type ReactNode } from 'react'
-import { UINavbarMobile, UINavbar } from '@/components'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
+import React from 'react'
+import UIFooter from './Footer'
+import { UINavbar } from './Navbar/UINavbar'
+import { UINavbarMobile } from './Navbar/UINavbarMobile'
 
-interface LayoutProps {
-  children: ReactNode
-}
-
-export default function Layout({ children }: LayoutProps): JSX.Element {
+const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
   const { isMobile, isTablet } = useMediaQuery()
   return (
-    <div className="relative h-screen">
-      {isMobile || isTablet ? <UINavbarMobile /> : <UINavbar />}
-      <div className="max-w-[330px] tablet:max-w-[834px] desktop:max-w-[1050px] mx-auto">
-        {children}
+    <div>
+      <div className="max-w-[1280px] mx-auto px-5">
+        {isMobile || isTablet ? <UINavbarMobile /> : <UINavbar />}
       </div>
+      <div>{children}</div>
+      <UIFooter />
     </div>
   )
 }
+
+export default Layout
