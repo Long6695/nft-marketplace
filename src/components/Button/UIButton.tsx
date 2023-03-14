@@ -14,6 +14,7 @@ type ButtonProps = {
   height?: ButtonHeight
   icon?: string
   size?: number
+  width?: string
 } & Omit<React.ComponentProps<'button'>, 'className'>
 
 const UIButton = ({
@@ -25,11 +26,13 @@ const UIButton = ({
   height = 'md',
   icon,
   size = 20,
+  width,
   ...props
 }: ButtonProps): JSX.Element => {
   const classes = cn(s.root, s[variant], s[height], {
     [s.fullWidth]: fullWidth,
     'min-w-20 px-4': !fullWidth,
+    [width as string]: !!width,
   })
 
   return (

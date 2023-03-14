@@ -10,7 +10,9 @@ const UIWeeklyDigest = (): JSX.Element => {
     <>
       <UIText
         text="Join Our Weekly Digest"
-        customStyle="font-semibold text-h4 desktop:text-h3"
+        sizeMobile="h4"
+        sizeTablet="h4"
+        sizeDesktop="h3"
       />
       <UIText text="Get exclusive promotions & updates straight to your inbox." />
     </>
@@ -25,7 +27,7 @@ const UIWeeklyDigest = (): JSX.Element => {
   )
   if (isTablet || isDesktop) {
     return (
-      <div className="tablet:h-[360px] desktop:h-[430px] bg-black-secondary rounded-xl">
+      <div className="tablet:h-[360px] desktop:h-[430px] bg-black-secondary rounded-xl mb-10">
         <div className="flex justify-around h-full p-6">
           {renderImage(isDesktop ? 425 : 300, isDesktop ? 310 : 280)}
           <div className="flex flex-col tablet:w-[300px] desktop:w-[425px] gap-7">
@@ -37,7 +39,7 @@ const UIWeeklyDigest = (): JSX.Element => {
     )
   }
   return (
-    <div className="h-[565px] rounded-xl">
+    <div className="h-[565px] rounded-xl mb-10">
       <div className="flex flex-col h-full">
         {renderImage(315, 255)}
         <div className="mt-10">

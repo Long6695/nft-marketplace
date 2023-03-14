@@ -20,21 +20,24 @@ const DiscoverCard = (): JSX.Element => {
         <div className="flex justify-between mt-2">
           <div>
             <UIText
-              customStyle="font-spaceMono text-small text-gray"
+              font="space-mono"
+              onlySize="small"
+              color="gray"
               text="Price"
             />
-            <UIText
-              customStyle="font-spaceMono text-small text-white"
-              text="1.63 ETH"
-            />
+            <UIText font="space-mono" onlySize="small" text="1.63 ETH" />
           </div>
           <div>
             <UIText
-              customStyle="font-spaceMono text-small text-gray"
+              font="space-mono"
+              onlySize="small"
+              color="gray"
               text="Highest Bid"
             />
             <UIText
-              customStyle="font-spaceMono text-small text-white"
+              font="space-mono"
+              onlySize="small"
+              color="gray"
               text="0.33 wETH"
             />
           </div>

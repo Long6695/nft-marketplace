@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import UIButton from '../../Button/UIButton'
 import { UIText } from '../../Text/UIText'
-import { UITitle } from '../../Text/UITitle'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import Avatar from '../../Avatar'
 import Link from 'next/link'
@@ -20,9 +19,17 @@ const UIHeroSection = (): JSX.Element => {
       <div className="flex flex-col">
         <UIText
           text={qty}
-          customStyle="font-semibold font-spaceMono text-h5 desktop:text-h4"
+          sizeMobile="h5"
+          sizeTablet="h5"
+          sizeDesktop="h4"
+          font="space-mono"
         />
-        <UIText text={text} customStyle="text-default desktop:text-h5" />
+        <UIText
+          text={text}
+          sizeMobile="default"
+          sizeTablet="default"
+          sizeDesktop="h5"
+        />
       </div>
     )
   }
@@ -52,10 +59,17 @@ const UIHeroSection = (): JSX.Element => {
   return (
     <div className="w-full flex flex-col items-center tablet:flex-row tablet:items-start tablet:justify-center gap-8">
       <div className="flex flex-col items-start w-[330px] desktop:w-[510px]">
-        <UITitle variant="h1" title="Discover Digital Art & Collect NFTs" />
+        <UIText
+          sizeDesktop="h1"
+          sizeTablet="h3"
+          sizeMobile="h4"
+          text="Discover Digital Art & Collect NFTs"
+        />
         <UIText
           text="NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists."
-          customStyle="text-default tablet-h5 mt-2"
+          sizeMobile="default"
+          sizeTablet="h5"
+          sizeDesktop="h5"
         />
         {(isDesktop || isTablet) && renderActionButton()}
       </div>

@@ -26,20 +26,20 @@ const Countdown = (): JSX.Element => {
 
   const renderTime = (time: string, text: string): JSX.Element => (
     <div className="flex flex-col">
-      <UIText customStyle="font-spaceMono text-h3" text={time} />
-      <UIText customStyle="font-spaceMono text-small" text={text} />
+      <UIText font="space-mono" onlySize="h3" text={time} />
+      <UIText font="space-mono" onlySize="small" text={text} />
     </div>
   )
 
   return (
     <div className="flex gap-4">
       {renderTime(moment(`${countdown.hours()}`, 'HH').format('HH'), 'Hours')}
-      <UIText customStyle="font-spaceMono text-h3" text=":" />
+      <UIText font="space-mono" onlySize="h3" text=":" />
       {renderTime(
         moment(`${countdown.minutes()}`, 'mm').format('mm'),
         'Minutes',
       )}
-      <UIText customStyle="font-spaceMono text-h3" text=":" />
+      <UIText font="space-mono" onlySize="h3" text=":" />
       {renderTime(
         moment(`${countdown.seconds()}`, 'ss').format('ss'),
         'Seconds',
@@ -67,7 +67,7 @@ const UIHighlight = (): JSX.Element => {
             <div className="bg-black-secondary py-2 px-4 rounded-full">
               <Avatar name="Shroomie" />
             </div>
-            <UIText text="Magic Mashroom" customStyle="text-h3" />
+            <UIText text="Magic Mashroom" onlySize="h3" />
             {!isMobile && renderButtonAction()}
           </div>
           <div className="relative w-[300px] h-[150px]">
@@ -75,7 +75,8 @@ const UIHighlight = (): JSX.Element => {
             <div className="absolute top-5 left-5 right-0 bottom-0">
               <UIText
                 text="Auction ends in"
-                customStyle="font-spaceMono text-small"
+                onlySize="small"
+                font="space-mono"
               />
               <Countdown />
             </div>

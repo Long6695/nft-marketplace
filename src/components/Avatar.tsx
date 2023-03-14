@@ -11,12 +11,10 @@ const Avatar = ({
 }): JSX.Element => {
   return (
     <>
-      {title === undefined ? null : (
-        <UIText text={title} customStyle="font-semibold text-h5 mb-2" />
-      )}
+      {title && <UIText text={title} onlySize="h5" />}
       <div className="flex items-center gap-2">
         <Image src="/images/avatar.png" width={24} height={24} alt="avatar" />
-        <UIText text={name} customStyle="text-default" />
+        <UIText text={name} onlySize="default" />
       </div>
     </>
   )
