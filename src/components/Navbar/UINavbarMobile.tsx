@@ -5,6 +5,8 @@ import UIButton from '../Button/UIButton'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/router'
 import UILogo from '../Logo'
+import MenuItems from './components/MenuItems'
+import cn from 'classnames'
 
 export const UINavbarMobile = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,9 +27,9 @@ export const UINavbarMobile = (): JSX.Element => {
   }): JSX.Element => {
     return (
       <div
-        className={`flex items-center justify-between py-6 ${
-          isOpen ? 'px-8' : 'px-0'
-        }`}
+        className={cn('flex items-center justify-between py-6', {
+          'px-8': isOpen,
+        })}
       >
         <Link href="/">
           <UILogo />
@@ -40,7 +42,7 @@ export const UINavbarMobile = (): JSX.Element => {
   const renderMenu = (): JSX.Element | null => {
     if (isOpen) {
       return (
-        <div className="absolute inset-0 bg-black z-50">
+        <div className="fixed inset-x-0 inset-y-0 bg-black z-50">
           {renderHeaderBar({
             renderIcon: () => (
               <div className="pl-2">
@@ -50,15 +52,7 @@ export const UINavbarMobile = (): JSX.Element => {
           })}
           <div className="flex flex-col p-8">
             <div className="flex flex-col items-start gap-10 py-10">
-              <Link href="/marketplace">
-                <h5 className="text-default">Marketplace</h5>
-              </Link>
-              <Link href="/rankings">
-                <h5 className="text-default">Rankings</h5>
-              </Link>
-              <Link href="/connect-wallet">
-                <h5 className="text-default">Connect a wallet</h5>
-              </Link>
+              <MenuItems />
             </div>
             <div className="w-[120px]">
               <Link href="/sign-up" passHref>
