@@ -29,7 +29,7 @@ const UIButton = ({
   width,
   ...props
 }: ButtonProps): JSX.Element => {
-  const classes = cn(s.root, s[variant], s[height], {
+  const classes = cn(s.root, s[variant], s[height], s.effect, {
     [s.fullWidth]: fullWidth,
     'min-w-20 px-4': !fullWidth,
     [width as string]: !!width,

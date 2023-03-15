@@ -6,6 +6,10 @@
   @apply w-full;
 }
 
+.effect {
+  @apply hover:opacity-90 active:translate-y-[2px];
+}
+
 /*
    * SIZES
    */
