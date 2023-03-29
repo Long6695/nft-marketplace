@@ -1,6 +1,6 @@
 {
   "name": "nft-marketplace-next",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,7 +11,8 @@
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
     "test-all": "yarn check-format && yarn check-lint && yarn check-types && yarn build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "release-it"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.15",
@@ -31,6 +32,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.1",
+    "react-icons": "^4.8.0",
     "react-toastify": "^9.1.1",
     "typescript": "*"
   },
@@ -51,6 +53,11 @@
     "lint-staged": "^13.1.1",
     "postcss": "^8.4.21",
     "prettier": "2.8.4",
+    "release-it": "^15.8.0",
     "tailwindcss": "^3.2.6"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com-personal:Long6695/nft-marketplace.git",
+  "author": "Long6695 <thaihothanhlong95@gmail.com>",
+  "license": "MIT"
 }
