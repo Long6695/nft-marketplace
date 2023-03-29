@@ -15,7 +15,7 @@ const UIFooter = (): JSX.Element => {
     return <UIText text={text} onlySize="default" color="gray" />
   }
   return (
-    <div className="bg-black-secondary p-10">
+    <div className="bg-black-secondary p-10 border-t-2 border-black">
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 tablet:grid-cols-[500px] desktop:grid-cols-footer gap-10">
         <div>
           <div className="mb-5">

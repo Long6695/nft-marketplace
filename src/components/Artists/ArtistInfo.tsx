@@ -41,7 +41,7 @@ const ArtistInfo = (): JSX.Element => {
     )
   }
   return (
-    <div className="flex flex-col gap-5">
+    <div className="container flex flex-col gap-5 mt-[120px]">
       <div className="flex flex-col items-start gap-5 desktop:flex-row">
         <UIText
           text="Animakid"
@@ -74,6 +74,7 @@ const ArtistInfo = (): JSX.Element => {
           sizeTablet="h5"
           sizeDesktop="h4"
           font="space-mono"
+          color="gray"
         />
         <UIText
           text="The internet's friendliest designer kid."
@@ -89,6 +90,7 @@ const ArtistInfo = (): JSX.Element => {
           sizeTablet="h5"
           sizeDesktop="h4"
           font="space-mono"
+          color="gray"
         />
         <div className="flex gap-2">
           <AiOutlineFacebook />
