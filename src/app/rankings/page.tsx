@@ -1,3 +1,4 @@
+'use client'
 import { UIText } from '@/components'
 import RankingBoards from '@/components/Rankings/RankingBoards'
 import RankingTabs from '@/components/Rankings/RankingTabs'

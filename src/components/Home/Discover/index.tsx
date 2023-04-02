@@ -1,3 +1,4 @@
+'use client'
 import UIButton from '@/components/Button/UIButton'
 import WrapperCards from '@/components/WrapperCards'
 import { useMediaQuery } from '@/hooks/useMediaQuery'

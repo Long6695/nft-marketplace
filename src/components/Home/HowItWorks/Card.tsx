@@ -1,3 +1,4 @@
+'use client'
 import { UIText } from '@/components/Text/UIText'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import Image from 'next/image'

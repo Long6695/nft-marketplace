@@ -1,3 +1,4 @@
+'use client'
 import UISendEmailButton from '@/components/Button/UISendEmailButton'
 import { UIText } from '@/components/Text/UIText'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
