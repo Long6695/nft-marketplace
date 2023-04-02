@@ -1,3 +1,4 @@
+'use client'
 import s from './Button.module.css'
 import React from 'react'
 import cn from 'classnames'

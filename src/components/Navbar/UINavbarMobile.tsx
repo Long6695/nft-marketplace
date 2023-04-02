@@ -1,18 +1,19 @@
+'use client'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import UIButton from '../Button/UIButton'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import UILogo from '../Logo'
 
 export const UINavbarMobile = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
-  const useRoute = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     setIsOpen(false)
-  }, [useRoute.pathname])
+  }, [pathname])
 
   const handleToggleMenu = (): any => {
     setIsOpen((prev) => !prev)

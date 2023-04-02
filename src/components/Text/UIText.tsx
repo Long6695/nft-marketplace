@@ -1,3 +1,4 @@
+'use client'
 import s from './Text.module.css'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import React from 'react'

@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from 'react'
 import Avatar from '@/components/Avatar'
 import UIButton from '@/components/Button/UIButton'

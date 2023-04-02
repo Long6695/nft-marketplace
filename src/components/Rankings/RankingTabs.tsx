@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react'
 import cn from 'classnames'
 import { UIText } from '../Text/UIText'
