@@ -57,12 +57,12 @@ const ArtistTabs = (): JSX.Element => {
             className={cn(
               'w-full cursor-pointer flex justify-center items-center py-4',
               {
-                'border-b-2 border-gray text-white': tab.value === active,
-                'text-gray': tab.value !== active,
+                'border-b-2 border-gray': tab.value === active,
               },
             )}
           >
             <UIText
+              color={tab.value !== active ? 'gray' : 'white'}
               text={tab.label}
               sizeDesktop="h5"
               sizeMobile="default"

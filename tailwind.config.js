@@ -35,6 +35,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         footer: '1.2fr 1fr 1.5fr',
+        ranking: '0.5fr 4fr 1fr 1fr 1fr',
       },
       colors: {
         'black-secondary': 'var(--black-secondary)',
@@ -44,6 +45,7 @@ module.exports = {
         gray: 'var(--gray)',
         white: 'var(--white)',
         'call-to-action': 'var(--call-to-action)',
+        green: 'var(--green)',
       },
     },
   },
