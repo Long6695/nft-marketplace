@@ -1,3 +1,4 @@
+'use client'
 import UISectionHeadline from '@/components/Text/UISectionHeadline'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import React from 'react'

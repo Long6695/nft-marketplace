@@ -1,12 +1,12 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
 import UIButton from '../Button/UIButton'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import UILogo from '../Logo'
 
-export const UINavbar = (): JSX.Element => {
-  const router = useRouter()
-
+export const UINavbarDesktop = (): JSX.Element => {
+  const pathname = usePathname()
   return (
     <div className="relative flex items-center justify-between py-6">
       <Link href="/">
@@ -16,7 +16,7 @@ export const UINavbar = (): JSX.Element => {
         <Link href="/marketplace">
           <h5
             className={`${
-              router.pathname === '/marketplace'
+              pathname === '/marketplace'
                 ? 'text-default text-call-to-action'
                 : 'text-default'
             }`}

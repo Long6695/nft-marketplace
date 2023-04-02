@@ -1,3 +1,4 @@
+'use client'
 import WrapperHeaderSection from '@/components/Home/HeroSection/WrapperHeaderSection'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import React from 'react'

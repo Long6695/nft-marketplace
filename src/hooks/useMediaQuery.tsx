@@ -1,3 +1,4 @@
+'use client'
 import { TABLET, DESKTOP } from '@/constants/breakpoint'
 import { useState, useEffect } from 'react'
 

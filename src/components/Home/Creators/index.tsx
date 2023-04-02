@@ -1,3 +1,4 @@
+'use client'
 import WrapperCards from '@/components/WrapperCards'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import Link from 'next/link'

@@ -1,3 +1,4 @@
+'use client'
 import s from './Text.module.css'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import React from 'react'
@@ -7,7 +8,7 @@ type Size = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'default' | 'small'
 
 type Font = 'work-sans' | 'space-mono'
 
-type Color = 'white' | 'gray'
+type Color = 'white' | 'gray' | 'green'
 interface Props {
   text: string
   sizeDesktop?: Size
@@ -16,6 +17,7 @@ interface Props {
   font?: Font
   onlySize?: Size
   color?: Color
+  spacing?: string
 }
 export const UIText = ({
   text,
